@@ -29,15 +29,15 @@ public class ControleRefrigerante implements RepositorioRefrigerante {
 	public void cadastrarRefrigerante() {
 		
 		try {		
-  		    System.out.print("\nMarca: ");
+  		        System.out.print("\nMarca: ");
 			String marca = sc.next();
 			sc.nextLine();
 			System.out.println("Unidade de Medida: ");
 			String unidadeMedida = sc.next();
 			sc.nextLine();
-			System.out.println("PreÁo de Compra R$: ");
+			System.out.println("Pre√ßo de Compra R$: ");
 			Double precoCompra = sc.nextDouble();
-			System.out.println("PreÁo de Venda R$: ");
+			System.out.println("Pre√ßo de Venda R$: ");
 			Double precoVenda = sc.nextDouble();
 			System.out.println("Sabor: ");
 			String sabor = sc.next();
@@ -50,11 +50,11 @@ public class ControleRefrigerante implements RepositorioRefrigerante {
 			refrigerantes.adicionarRefrigerante(refrigerante);
 			bebidas.adicionarBebida(refrigerante);
 			
-			System.out.println("\nValor do C·lculo de Venda R$: " + refrigerante.mostrarValorVenda());
+			System.out.println("\nValor do C√°lculo de Venda R$: " + refrigerante.mostrarValorVenda());
 
 		}
 		catch (ParseException e) {
-			throw new DataInvalida("Data fora dos padrıes ou inv·lida!");
+			throw new DataInvalida("Data fora dos padr√µes ou inv√°lida!");
 		}
 		catch (InputMismatchException e) {
 			throw new ConversaoInvalida("Dados Inadequados!");
