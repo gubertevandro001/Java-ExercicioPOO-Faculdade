@@ -23,8 +23,7 @@ public class ServicoRelatorio {
 	List<String> valores = new ArrayList<>();
 	
 	public void imprimeRelatorio() {
-		
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\PerfLogs\\exercício_poo.txt", true))) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\PerfLogs\\exercÃ­cio_poo.txt", true))) {
 			
 			for (Vinho vinho : vinhos.getVinhos()) {
 				bw.append(String.valueOf(vinho.calcularValorVenda() + "\n"));
@@ -43,9 +42,8 @@ public class ServicoRelatorio {
 		}
 	}
 	
-	public void mostrarRelatorio() {
-		
-		try (BufferedReader br = new BufferedReader(new FileReader("C:\\PerfLogs\\exercício_poo.txt"))) {
+	public void mostrarRelatorio() {		
+		try (BufferedReader br = new BufferedReader(new FileReader("C:\\PerfLogs\\exercÃ­cio_poo.txt"))) {
 			
 			String ler = br.readLine();
 			
@@ -54,7 +52,7 @@ public class ServicoRelatorio {
 				ler = br.readLine();
 			}
 			
-			System.out.println("\nRelatório de Preços Permitidos Para Venda:\n");
+			System.out.println("\nRelatÃ³rio de PreÃ§os Permitidos Para Venda:\n");
 			for (String valor : valores) {
 				System.out.println("-> R$: " + valor);
 			}
